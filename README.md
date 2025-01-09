@@ -1,4 +1,4 @@
-[🇺🇸]()
+[🇧🇷](https://github.com/iFallenHunt/target-sis/blob/main/README-PTBR.md)
 
 # Project Overview
 
