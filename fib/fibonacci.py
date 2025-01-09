@@ -1,43 +1,43 @@
-def gerar_fibonacci(n):
+def generate_fibonacci(n):
     """
-    Gera a sequência de Fibonacci até o enésimo termo.
-    :param n: Número de termos da sequência a serem gerados
-    :return: Lista contendo a sequência de Fibonacci
+    Generates the Fibonacci sequence up to the nth term.
+    :param n: Number of terms of the sequence to be generated
+    :return: List containing the Fibonacci sequence
     """
     if n <= 0:
         return []
     elif n == 1:
         return [0]
 
-    sequencia = [0, 1]
+    sequence = [0, 1]
     for i in range(2, n):
-        sequencia.append(sequencia[-1] + sequencia[-2])
-    return sequencia
+        sequence.append(sequence[-1] + sequence[-2])
+    return sequence
 
 
-def esta_na_fibonacci(numero, sequencia):
+def is_in_fibonacci(number, sequence):
     """
-    Verifica se um número está na sequência de Fibonacci gerada.
-    :param numero: Número a ser verificado
-    :param sequencia: Lista com a sequência de Fibonacci
-    :return: True se o número está na sequência, False caso contrário
+    Checks if a number is in the generated Fibonacci sequence.
+    :param number: Number to be checked
+    :param sequence: List with the Fibonacci sequence
+    :return: True if the number is in the sequence, False otherwise
     """
-    return numero in sequencia
+    return number in sequence
 
 
-# Exemplo de uso
-n_termos = int(input(
-    "Quantos termos da sequência de Fibonacci você quer gerar? "))
-numero_para_verificar = int(input("Informe o número que deseja verificar: "))
+# Example of usage
+n_terms = int(input(
+    "How many terms of the Fibonacci sequence do you want to generate? "))
+number_to_check = int(input("Enter the number you want to check: "))
 
-sequencia_fibonacci = gerar_fibonacci(n_termos)
-print("Sequência gerada:", sequencia_fibonacci)
+fibonacci_sequence = generate_fibonacci(n_terms)
+print("Generated sequence:", fibonacci_sequence)
 
-if esta_na_fibonacci(numero_para_verificar, sequencia_fibonacci):
-    print(f"O número {numero_para_verificar} está na sequência de "
-          "Fibonacci gerada.")
+if is_in_fibonacci(number_to_check, fibonacci_sequence):
+    print(f"The number {number_to_check} is in the generated Fibonacci "
+          "sequence.")
 else:
     print(
-        f"O número {numero_para_verificar} não está na sequência de "
-        "Fibonacci gerada."
+        f"The number {number_to_check} is not in the generated Fibonacci "
+        "sequence."
     )

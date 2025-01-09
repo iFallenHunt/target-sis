@@ -1,22 +1,22 @@
-# Faturamento mensal por estado
-faturamento = {
+# Monthly revenue by state
+revenue = {
     "SP": 67836.43,
     "RJ": 36678.66,
     "MG": 29229.88,
     "ES": 27165.48,
-    "Outros": 19849.53,
+    "Others": 19849.53,
 }
 
-# Cálculo do faturamento total
-total_faturamento = sum(faturamento.values())
+# Calculation of total revenue
+total_revenue = sum(revenue.values())
 
-# Cálculo do percentual de cada estado
-percentuais = {
-    estado: (valor / total_faturamento) * 100
-    for estado, valor in faturamento.items()
+# Calculation of the percentage for each state
+percentages = {
+    state: (value / total_revenue) * 100
+    for state, value in revenue.items()
 }
 
-# Exibição dos resultados
-print("Percentual de faturamento por estado:")
-for estado, percentual in percentuais.items():
-    print(f"{estado}: {percentual:.2f}%")
+# Displaying the results
+print("Percentage of revenue by state:")
+for state, percentage in percentages.items():
+    print(f"{state}: {percentage:.2f}%")
