@@ -10,7 +10,7 @@ def generate_fibonacci(n):
         return [0]
 
     sequence = [0, 1]
-    for i in range(2, n):
+    for _ in range(2, n):
         sequence.append(sequence[-1] + sequence[-2])
     return sequence
 
